@@ -1,5 +1,8 @@
 function isPalindrome(number) {
   let numberString = number.toString();
+  if (numberString.length == 1) {
+    return true;
+  }
   let pointerLast = numberString.length - 1;
   let flag = true;
   for (i = 0; pointerLast > i; i++) {
@@ -12,21 +15,27 @@ function isPalindrome(number) {
   return flag;
 }
 
-function angkaPalindrome(number) {
-  let flag = true;
-  let result = number;
-  if (number < 10) {
-    result++
+function cekPalindrome(param, counter, value, flag) {
+  if (counter != 0 && flag == true) {
+    return value;
   } else {
-    while (flag) {
-      if(isPalindrome(result)){
-        flag = false;
-      }else{
-        result++;
+    if (param(value)) {
+      if (counter == 0) {
+        value++;
+        counter++;
+      } else {
+        flag = true;
       }
+    } else {
+      value++;
+      counter++;
     }
+    return cekPalindrome(param, counter, value, flag);
   }
+}
 
-  return result;
+function angkaPalindrome(number) {
+  let result2 = cekPalindrome(isPalindrome, 0, number, false);
+  return result2;
 }
 console.info(angkaPalindrome(1000));
