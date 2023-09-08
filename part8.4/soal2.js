@@ -38,4 +38,4 @@ function angkaPalindrome(number) {
   let result2 = cekPalindrome(isPalindrome, 0, number, false);
   return result2;
 }
-console.info(angkaPalindrome(1000));
+console.info(angkaPalindrome(11));

@@ -59,5 +59,5 @@ function xo(str){
 
 console.info(bandingkanAngka(10,11));
 console.info(balikKata("arya enrico"));
-console.info(konversiMenit(124));
+console.info(konversiMenit(40));
 console.info(xo('oxox'));
