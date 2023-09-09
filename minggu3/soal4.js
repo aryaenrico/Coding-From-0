@@ -1,7 +1,6 @@
 function graduates(students) {
   let setClass = new Set();
   let listClass = [];
-  let result = [];
   let listGraduateStudent = [];
   if (students.length == 0) {
     return {};
