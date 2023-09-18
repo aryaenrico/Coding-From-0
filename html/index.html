@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Review Html</title>
+  </head>
+  <body>
+
+      <button type="submit" id="tombol">Kirim</button>
+   
+
+    <script>
+      let judul = document.getElementById("tombol");
+      let contentText ="kirim form dom";
+      let changeContern =()=>{
+        judul.textContent = contentText;
+      }
+      judul.addEventListener("click",changeContern);
+      
+    </script>
+  </body>
+</html>
